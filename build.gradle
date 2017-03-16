@@ -6,8 +6,14 @@ group = 'org.adamduffy.codility'
 version = '1.0'
 
 repositories {
-    mavenLocal()
-    mavenCentral()
+    if (Boolean.getBoolean("insideDepartment")) {
+        maven {
+            url 'http://sdbahdpci1.agriculture.gov.ie:8081/nexus/content/groups/public'
+        }
+    } else {
+        mavenLocal()
+        mavenCentral()
+    }
 }
 
 dependencies {
