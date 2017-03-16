@@ -7,8 +7,8 @@ public class OddOccurrencesInArray {
 
     public int solution(int[] A) {
         int result = 0;
-        for (int offset = 0; offset < A.length; offset++) {
-            result ^= A[offset];
+        for (int intInArray : A) {
+            result ^= intInArray;
         }
         return result;
     }
