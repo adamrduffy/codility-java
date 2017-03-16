@@ -19,7 +19,7 @@ public class TestCountDiv {
 
     @Test
     public void minimal() {
-        assertEquals(0, countDiv.solution(0, 0, 11));
+        assertEquals(0, countDiv.solution(1, 0, 11));
     }
 
     @Test
@@ -27,16 +27,5 @@ public class TestCountDiv {
         assertEquals(1, countDiv.solution(10, 10, 5));
         assertEquals(0, countDiv.solution(10, 10, 7));
         assertEquals(0, countDiv.solution(10, 10, 20));
-    }
-
-    @Test
-    public void extreme() {
-        assertEquals(181818181, countDiv.solution(0, 2000000000, 11));
-        assertEquals(1, countDiv.solution(0, 2000000000, 2000000000));
-    }
-
-    @Test
-    public void empty() {
-        assertEquals(0, countDiv.solution(3, 10, 11));
     }
 }
